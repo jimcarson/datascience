@@ -12,9 +12,6 @@ def sentiment(a,d):
         return(float(d[a]))
     return 0
 
-def lines(fp):
-    if (debug): print str(len(fp.readlines()))
-
 def main():
 #
 # Read the sentiment file into a dictionary.
@@ -60,6 +57,6 @@ def main():
                 if (debug): print i,len(words),s, t
                 print s
             except KeyError: pass
-        #    print lines(sent_file)
+
 if __name__ == '__main__':
     main()
