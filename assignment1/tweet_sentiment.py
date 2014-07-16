@@ -56,7 +56,8 @@ def main():
                    if debug: print j, sentiment(j,d)
                 if (debug): print i,len(words),s, t
                 print s
-            except KeyError: pass
+            except KeyError: 
+                print s # pass
 
 if __name__ == '__main__':
     main()
