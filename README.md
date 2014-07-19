@@ -7,3 +7,5 @@ These are my assignments for Introduction to Data Science - Bill Howe -- Spring 
 Assignment 1: Parsing Twitter feeds.  Uses python.
 
 Assignment 2: Relational algebra and SQL.  Uses SQLite3.
+
+Assignment 3: Map/Reduce examples.  Uses python.
