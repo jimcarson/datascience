@@ -13,7 +13,7 @@ mr = MapReduce.MapReduce()
 # Do not modify above this line
 
 # 
-# Make the list unique & preserve order.  
+# Make the word list unique & preserve order.  
 # Source: peterbe.com/plog/uniquifiers-benchmark
 #
 def uniqueify(seq, idfun=None): 
