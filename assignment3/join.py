@@ -30,7 +30,7 @@ def mapper(record):
 
 def reducer(order_id, row):
     l=len(row)
-
+    # since the zeroeth element is the record type identifier, start with ID
     for i in range(1,l):
       v = []
       v += row[0] # order_id
