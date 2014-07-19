@@ -4,7 +4,7 @@ import sys
 """
 Friend Count
 
-Input is a two-element list [personA, personB], representing a simple social network.  Note that friendship may not be bidirectional.
+Input is a two-element list [personA, personB], representing a simple social network.  Note that friendship may not be bidirectional.  That is for the next exercise.
 
 """
 
