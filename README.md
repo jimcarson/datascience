@@ -9,3 +9,5 @@ Assignment 1: Parsing Twitter feeds.  Uses python.
 Assignment 2: Relational algebra and SQL.  Uses SQLite3.
 
 Assignment 3: Map/Reduce examples.  Uses python.
+
+Assignment 4: Optional Large-scale processing in The Cloud.  Uses Pig/Map Reduce.
