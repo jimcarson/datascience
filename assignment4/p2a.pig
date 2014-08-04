@@ -1,3 +1,6 @@
+-- 
+-- Histogram, small data file.
+--
 register ./pigtest/myudfs.jar
 raw = load './cse344-test-file.txt' USING TextLoader as (line:chararray);
 ntriples = foreach raw generate FLATTEN(myudfs.RDFSplit3(line)) as (subject:chararray,predicate:chararray,object:chararray);
