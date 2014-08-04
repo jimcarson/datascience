@@ -1,3 +1,6 @@
+--
+-- Histogram, medium file.
+--
 register ./pigtest/myudfs.jar
 raw = load './btc-2010-chunk-000' USING TextLoader as (line:chararray);
 ntriples = foreach raw generate FLATTEN(myudfs.RDFSplit3(line)) as (subject:chararray,predicate:chararray,object:chararray);
