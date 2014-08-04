@@ -1,3 +1,8 @@
+--
+-- Histogram, entire dataset.  You will not be able to run this locall. :-)
+-- I used 18 m3.xlarge EMR servers, job completed in about 18 minutes.  You
+-- could probably go with fewer and better optimize spending.
+--
 register ./pigtest/myudfs.jar
 raw = LOAD 's3n://uw-cse-344-oregon.aws.amazon.com/btc-2010-chunk-*' USING TextLoader as (line:chararray);
 ntriples = foreach raw generate FLATTEN(myudfs.RDFSplit3(line)) as (subject:chararray,predicate:chararray,object:chararray);
