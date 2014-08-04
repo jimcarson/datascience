@@ -1,3 +1,6 @@
+--
+-- Filter+inner/self-Join, medium file.
+--
 register ./pigtest/myudfs.jar
 
 raw = load './btc-2010-chunk-000' USING TextLoader as (line:chararray);
