@@ -1,2 +1,14 @@
+*.swp
+.gitignore
 .DS_Store
 test.txt
+lectures/*
+assignment4/btc-2010-chunk-000
+assignment4/cse344-test-file.txt
+assignment4/example-results
+assignment4/p2b_histogram
+assignment4/p3a_preliminary
+assignment4/p3b_preliminary
+assignment4/p3a_result
+assignment4/p3b_result
+*/pig*.log
