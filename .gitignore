@@ -12,3 +12,5 @@ assignment4/p3b_preliminary
 assignment4/p3a_result
 assignment4/p3b_result
 */pig*.log
+.R*
+*/.R*
