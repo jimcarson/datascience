@@ -58,7 +58,7 @@ summary(dt_result)
 myformula <-  pop ~ fsc_small + fsc_perp + fsc_big + pe + chl_big + chl_small
 ctree_model = ctree(myformula, data=training)
 ct_predict = predict(ct_model, newdata=test)
-ct_result =  ct_predict = test$pop
+ct_result =  ct_predict == test$pop
 summary(ct_result)
 
 # Question 9: Random Forests
@@ -92,10 +92,10 @@ summary(svm_result)
 
 # Question 12: Confusion matrices.
 # What appears to be the most common error?  I found the DT one more helpful.
-table(pred = dt_result, true = test$pop) # Decision tree
-table(pred = ct_result, true = test$pop)
-table(pred = rf_result, true = test$pop) # Random Forest
-table(pred = svm_result, true = test$pop) # Support Vector Machine
+table(pred = dt_predict, true = test$pop) # Decision tree
+table(pred = ct_predict, true = test$pop)
+table(pred = rf_predict, true = test$pop) # Random Forest
+table(pred = svm_predict, true = test$pop) # Support Vector Machine
 
 # Question 13: We assumed variables were continuous.  One of them has a
 # lot of clustering.  
@@ -127,10 +127,10 @@ new_training = splits$trainset
 new_test = splits$testset
 
 library("e1071")
-svm_model = svm(newfol, data=new_training)
-svm_predict = predict(svm_model, newdata=new_test)
-svm_result = svm_predict == new_test$pop
-summary(svm_result)
+new_svm_model = svm(newfol, data=new_training)
+new_svm_predict = predict(new_svm_model, newdata=new_test)
+new_svm_result = new_svm_predict == new_test$pop
+summary(new_svm_result)
 # 810 false, 29364 true = .9731557
 
 # .9731557 - .9206845 = 0.0524712 == this is very significant!
