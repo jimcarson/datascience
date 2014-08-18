@@ -9,7 +9,9 @@ t = read.csv("seaflow_21min.csv")
 # Question 1: How many particles labeled synecho
 summary(t$pop)
 # Question 2: What is the 3rd Quantile of the field fsc_small
-summary(t$fsc_small) # gives different count than summary(t)
+# Precision will make a difference in the second call
+summary(t)
+summary(t$fsc_small, digits=12) 
 
 # splitdf function will return a list of training and testing sets
 splitdf <- function(dataframe, seed=NULL) {
