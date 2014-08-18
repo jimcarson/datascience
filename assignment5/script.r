@@ -37,9 +37,7 @@ h = ggplot(test, aes(pe, chl_small))
 h + geom_point() + geom_point(aes(color = pop)) 
 
 
-# Decision Tree model -- technically we need to map these to the value
-# selected (DT returns a fractional value matrix.  Round it, map the 1
-# column to the prediction
+# Decision Tree model --  the "class" avoids having to round and remap data.
 fol <- formula(pop ~ fsc_small + fsc_perp + fsc_big + pe + chl_big + chl_small)
 dt_model <- rpart(fol, method="class", data=training)
 
@@ -56,7 +54,7 @@ dt_result = dt_predict == test$pop
 summary(dt_result)
 
 # Bonus points: A different decision tree method
-#  3184 false, 32988 true = (32988 / (32988+3184)) = 91.2%
+#  3184 false, 32988 true = 0.912...
 myformula <-  pop ~ fsc_small + fsc_perp + fsc_big + pe + chl_big + chl_small
 ctree_model = ctree(myformula, data=training)
 ct_predict = predict(ct_model, newdata=test)
@@ -116,7 +114,7 @@ new_dt_predict <- predict(new_dt_model, newdata=test, type="class")
 new_dt_result = new_dt_predict == test$pop
 summary(new_dt_result)
 
-# Not much!  
+# Answer: Not much!  
 
 # Question 14: Remove File 208 from the mix and run the SVM again.
 # What's the change in accuracy?
