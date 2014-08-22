@@ -14,5 +14,5 @@ count_by_subject = foreach subjects generate flatten($0), COUNT($1) as count PAR
 histogram = group count_by_subject by (count) PARALLEL 50;
 
 -- emit output.
-store histogram into 'p2a_histogram' using PigStorage();
+store histogram into 'p2_histogram' using PigStorage();
 
