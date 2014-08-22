@@ -14,7 +14,7 @@ ff = filter tmp by (subject matches '.*rdfabout\\.com.*');
 
 f = DISTINCT ff;
 
--- store f into 'p3b_preliminary' using PigStorage();
+-- store f into 'p5_preliminary' using PigStorage();
 
 -- Copy filtered list
 ftmp = foreach f GENERATE * as (subject2:chararray,predicate2:chararray,object2:chararray);
@@ -27,4 +27,4 @@ j = JOIN f by object , f2 by subject2;
 result = distinct j;
 
 -- emit results
-store result into 'p3b_result' using PigStorage();
+store result into 'p5_result' using PigStorage();
