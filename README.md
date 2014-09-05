@@ -14,3 +14,5 @@ Assignment 4: Optional Large-scale processing in The Cloud.  Uses Pig/Map Reduce
 
 
 Assignment 5: Machine learning with R using a real data set.  This was a cool assignment because it had a degree of real-life (e.g., bad data)
+
+Assignment 6: Optional visualization exercise using Tableau.  For this, my dashboard was simply a graphic depicting the frequency, by state, of precautionary landings following an animal strike on a departure phase (run-up or climb).  New York, Ohio, Illinois and Pennsylvania had the highes occurrence of events during climbing, Texas during run-up.
